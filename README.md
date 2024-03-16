@@ -76,7 +76,10 @@ conda activate SyBA
 &nbsp;  
 # Efficiency of SyBA
 ##### [Go to Contents Overview](#contents-overview)
-> ![SyBA](/assets/img/Figure2.png "Map")  Figure 2. **(a)** Comparison between the number of gene name variations in the **SyBA database (v1.0.0)** and the number of proteins without a gene name. **(b)** The **15 genes** with the **most name variations** in the **SyBA database (v1.0.0)**. **(c)** By applying the names of proteins that do **not have a gene name**, it is possible to **recover this information** in up to **55.3%** of cases. **(d)** The **time required** for the **SyBA class** to **standardize gene names** in **1000 bacterial genomes**, with the **possibility of executing the function asynchronously** to further **reduce processing time**. **(e)** The time required to **generate 1000 search commands** with gene name variations.
+> ![SyBA](/assets/img/Figure2.png "Comparison")  Figure 2. **(a)** Comparison between the number of gene name variations in the **SyBA database (v1.0.0)** and the number of proteins without a gene name. **(b)** The **15 genes** with the **most name variations** in the **SyBA database (v1.0.0)**. **(c)** By applying the names of proteins that do **not have a gene name**, it is possible to **recover this information** in up to **55.3%** of cases. **(d)** The **time required** for the **SyBA class** to **standardize gene names** in **1000 bacterial genomes**, with the **possibility of executing the function asynchronously** to further **reduce processing time**. **(e)** The time required to **generate 1000 search commands** with gene name variations.
+&nbsp;  
+  
+> ![SyBA](/assets/img/Figure3.png "Comparison")  Figure 3. A comparative analysis of search results in **March 2024**, contrasting the efficiency of the **SyBA web form** against conventional searches in GenBank **(a)** and PubMedCentral **(b)**. The comparison underscores the enhanced efficiency attained through the use of combined gene nomenclature and variation in gene nomenclature for genes **birA**, **folD**, **fruA**, **hsdM**, **hsdR**, **hsdS**, **kdpD**, **mtlA**, **potD**, **pstS**, **putA**, **tnp**, **tnpA**, **wzy** and **wzx**.
 &nbsp;  
 ***  
 
