@@ -20,6 +20,11 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
+  <meta property="og:title" content="SyBA">
+  <meta property="og:description" content="SyBA: a tool and database for standardizing gene names in bacterial genomes">
+  <meta property="og:image" content="assets/SyBA.png">
+  <meta property="og:url" content="https://luanrabelo.github.io/SyBA/">
+
   <style>
     body {
       font-family: "Anta", sans-serif;
@@ -161,7 +166,7 @@
     <div class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive"
       aria-atomic="true">
       <div class="toast-header">
-        <img src="../assets/img/SyBA.png" width="10%" class="rounded me-2" alt="...">
+        <img src="assets/SyBA.png" width="10%" class="rounded me-2" alt="...">
         <strong class="me-auto">Notification</strong>
         <small>Just now</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
@@ -198,7 +203,7 @@
             <h3 class="modal-title" id="staticBackdropLabel">SyBA Query Builder</h3>
           </div>
           <div class="modal-body text-center">
-            <img src="../assets/img/SyBA.png" class="rounded me-2" alt="SyBA" width="35%">
+            <img src="assets/SyBA.png" class="rounded me-2" alt="SyBA" width="35%">
             <div class="progress mt-5 mb-5">
               <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"
                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -220,7 +225,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body text-center">
-            <img src="../assets/img/SyBA.png" class="rounded me-2" alt="SyBA" width="30%">
+            <img src="assets/SyBA.png" class="rounded me-2" alt="SyBA" width="30%">
             <div class="h4 mt-5 mb-5">
               It seems like you're enjoying our tool! If you'd like to keep the gears turning and the coffee flowing for
               our developers, consider making a donation. Your contribution will go directly towards buying more coffee
@@ -245,7 +250,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body text-center">
-            <img src="../assets/img/SyBA.png" class="rounded me-2" alt="SyBA" width="30%">
+            <img src="assets/SyBA.png" class="rounded me-2" alt="SyBA" width="30%">
             <div class="h4 mt-5 mb-5">
               Soon...
             </div>
@@ -265,7 +270,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body text-center">
-            <img src="../assets/img/SyBA.png" class="rounded me-2" alt="SyBA" width="30%">
+            <img src="assets/SyBA.png" class="rounded me-2" alt="SyBA" width="30%">
             <div class="h4 mt-5 mb-5">
               Soon...
             </div>
@@ -473,6 +478,7 @@
       </div>
     </div>
   </footer>
+
   <script>
     $(document).ready(function () {
       // Variables to be used
@@ -503,10 +509,20 @@
         if (inputValue.length > 5) {
           this.style.backgroundColor = "#A8CD9F";
           selectGenes.disabled = false;
+          selectGenes.value = "";
+          selectGenes.style.backgroundColor = '';
+
+          selectDatabase.value = "n";
+          selectDatabase.disabled = true;
           resetFields();
         } else {
           this.style.backgroundColor = inputValue.length === 0 ? initialColor : initialColor;
           selectGenes.disabled = true;
+          selectGenes.value = "";
+          selectGenes.style.backgroundColor = '';
+
+          selectDatabase.value = "n";
+          selectDatabase.disabled = true;
           resetFields();
         }
       });
