@@ -75,18 +75,7 @@
       text-decoration: none;
     }
 
-    .navbar-link {
-    color: #000000 !important; /* Define a cor do texto como preto */
-}
-
-.navbar-link:hover {
-    color: #FFFFFF !important; /* Define a cor do texto como branco ao passar o mouse */
-}
-
-.navbar-link:visited {
-    color: #000000 !important; /* Define a cor do texto como preto para links visitados */
-}
-
+    
 
     .verticalDivider {
       border-right: 1.5px solid #EEEEEE25;
@@ -167,23 +156,25 @@
         <div class="collapse navbar-collapse" id="menuSyBA">
           <ul class="navbar-nav">
             <li>
-              <a class="nav-link btn btn-lg btn-outline-light" href="https://github.com/luanrabelo/SyBA"
-                target="_blank">GitHub</a>
+              <a class="btn btn-lg btn-dark text-white" href="https://github.com/luanrabelo/SyBA"
+                role="button" target="_blank">GitHub</a>
             </li>
             <li>
-              <a class="nav-link btn btn-lg btn-outline-light" data-bs-toggle="modal" , data-bs-target="#citeUs"
-                href="#">Cite Us</a>
+              <button class="btn btn-lg btn-dark text-white" data-bs-toggle="modal"
+                data-bs-target="#citeUs">Cite Us</button>
             </li>
             <li>
-              <a class="nav-link btn btn-lg btn-outline-light" data-bs-toggle="modal" data-bs-target="#donationModal"
-                href="#">Donate</a>
+              <button class="btn btn-lg btn-dark text-white" data-bs-toggle="modal"
+                data-bs-target="#donationModal">Donate</button>
             </li>
             <li>
-              <a class="nav-link btn btn-lg btn-outline-light" data-bs-toggle="modal" , data-bs-target="#aboutSyBA"
-                href="#">About</a>
+              <button class="btn btn-lg btn-dark text-white" data-bs-toggle="modal"
+                data-bs-target="#aboutSyBA">About</button>
             </li>
           </ul>
         </div>
+
+
 
       </div>
     </nav>
@@ -246,7 +237,8 @@
       </div>
     </div>
 
-    <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true"
+      data-bs-backdrop="static" data-bs-keyboard="false">
       <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
           <div class="modal-header bg-dark text-white">
@@ -260,7 +252,8 @@
               (the secret fuel behind this tool!). Remember, every cup counts! ☕️💻
             </div>
             <div class="d-grid col-lg-6 col-md-12 mx-auto">
-              <a class="btn btn-lg btn-success" href="https://www.buymeacoffee.com/lprabelo" role="button" target="_blank"><i style="vertical-align: middle;" class="fa-solid fa-mug-hot fa-2x"></i> Donate Now</a>
+              <a class="btn btn-lg btn-success" href="https://www.buymeacoffee.com/lprabelo" role="button"
+                target="_blank"><i style="vertical-align: middle;" class="fa-solid fa-mug-hot fa-2x"></i> Donate Now</a>
             </div>
           </div>
           <div class="modal-footer bg-dark">
@@ -270,7 +263,8 @@
       </div>
     </div>
 
-    <div class="modal fade" id="citeUs" tabindex="-1" aria-labelledby="citeUsModal" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal fade" id="citeUs" tabindex="-1" aria-labelledby="citeUsModal" aria-hidden="true"
+      data-bs-backdrop="static" data-bs-keyboard="false">
       <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
           <div class="modal-header bg-dark text-white">
@@ -289,7 +283,8 @@
       </div>
     </div>
 
-    <div class="modal fade" id="aboutSyBA" tabindex="-1" aria-labelledby="aboutSyBAModal" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal fade" id="aboutSyBA" tabindex="-1" aria-labelledby="aboutSyBAModal" aria-hidden="true"
+      data-bs-backdrop="static" data-bs-keyboard="false">
       <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header bg-dark text-white">
@@ -298,10 +293,17 @@
           <div class="modal-body text-center">
             <img src="assets/SyBA.png" class="rounded me-2" alt="SyBA" width="25%">
             <div class="h4 mt-2 mb-2">
-            <div class="mt-3 mb-1"><b>SyBA</b> is a tool and database for standardizing gene names in bacterial genomes.</div>
-            <div class="mt-3 mb-1">The authors of this tool are <b>Luan Rabelo</b>, Davidson Sodré, Luiza Helena Meller da Silva, Grazielle Gomes, Iracilda Sampaio, and Marcelo Vallinoto</div>
-            <div class="mt-3 mb-5"><b>SyBA's</b> database is based on <b>1,215,109</b> functional bacterial genomes, including the genres <i>Campylobacter</i>, <i>Clostridium</i>, <i>Escherichia</i>, <i>Listeria</i>, <i>Salmonella</i>, <i>Shigella</i>, <i>Staphylococcus</i>, and <i>Vibrio</i></div>
-            <small class="mt-5 mb-1">This tool is available on GitHub, under the MIT license, and offers a database of synonyms, a python class to standardize and search for sequences or manuscripts, using all possible variations of the same gene name, and a web form for isolated searches in public repositories, such as GenBank and PubMedCentral.</small>
+              <div class="mt-3 mb-1"><b>SyBA</b> is a tool and database for standardizing gene names in bacterial
+                genomes.</div>
+              <div class="mt-3 mb-1">The authors of this tool are <b>Luan Rabelo</b>, Davidson Sodré, Luiza Helena
+                Meller da Silva, Grazielle Gomes, Iracilda Sampaio, and Marcelo Vallinoto</div>
+              <div class="mt-3 mb-5"><b>SyBA's</b> database is based on <b>1,215,109</b> functional bacterial genomes,
+                including the genres <i>Campylobacter</i>, <i>Clostridium</i>, <i>Escherichia</i>, <i>Listeria</i>,
+                <i>Salmonella</i>, <i>Shigella</i>, <i>Staphylococcus</i>, and <i>Vibrio</i></div>
+              <small class="mt-5 mb-1">This tool is available on GitHub, under the MIT license, and offers a database of
+                synonyms, a python class to standardize and search for sequences or manuscripts, using all possible
+                variations of the same gene name, and a web form for isolated searches in public repositories, such as
+                GenBank and PubMedCentral.</small>
             </div>
           </div>
           <div class="modal-footer bg-dark">
