@@ -13,7 +13,6 @@ import os
 import sys
 import time
 import re
-import asyncio
 
 class TerminalColors:
     Green       = '\033[92m'
@@ -79,25 +78,7 @@ except ImportError:
     else:
         print(f"{TerminalColors.Fail}Installation 'Numpy' aborted!{TerminalColors.End}")
         sys.exit()
-try:
-    import aiofiles
-    print(f"{TerminalColors.Green}Module 'Aiofiles' found and imported!{TerminalColors.End}")
-except ImportError:
-    print(f"{TerminalColors.Fail}Module 'Aiofiles' not found, please install it with: pip install aiofiles{TerminalColors.End}")
-    print(f"{TerminalColors.Warning}{TerminalColors.Underline}Do you want to install it now? (yes/no){TerminalColors.End}")
-    Choice = str(input())
-    if Choice.lower() in ['y', 'yes']:
-        os.system('pip install aiofiles')
-        print(f"{TerminalColors.Green}Module 'Aiofiles' installed successfully!{TerminalColors.End}")
-        try:
-            import aiofiles
-            print(f"{TerminalColors.Green}Module 'Aiofiles' found and imported!{TerminalColors.End}")
-        except ImportError:
-            print(f"{TerminalColors.Fail}Module 'Aiofiles' not found, please reinstall it with: pip install aiofiles{TerminalColors.End}")
-            sys.exit()
-    else:
-        print(f"{TerminalColors.Fail}Installation 'Aiofiles' aborted!{TerminalColors.End}")
-        sys.exit()
+
 class SyBA:
     """
         # `SyBA`: `Sy`nonymous `BA`cteria
@@ -312,8 +293,8 @@ class SyBA:
             print(f"{TerminalColors.Warning}{time.strftime('%Y/%m/%d - %H:%M:%S')} - Searching for '{_protein}' in {__tool__} database...{TerminalColors.End}")
         try:
             # Use numpy's where function for faster lookup
-            Local = np.where(protein_values == _protein)[0][0]
-            ShortName = gene_values[Local]
+            Local       = np.where(protein_values == _protein)[0][0]
+            ShortName   = gene_values[Local]
             if _verbose:
                 print(f"{TerminalColors.Green}{time.strftime('%Y/%m/%d - %H:%M:%S')} - Protein '{_protein}' found in {__tool__} database!{TerminalColors.End}")
                 print(f"{TerminalColors.Warning}{time.strftime('%Y/%m/%d - %H:%M:%S')} - '{_protein}' renamed to '{ShortName}'!{TerminalColors.End}")
