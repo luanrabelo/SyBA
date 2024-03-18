@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name = 'SyBA',
-    version = '0.0.1',
+    version = '0.0.2',
     description = 'SyBA: a tool and database for standardizing gene names in bacterial genomes.',
     long_description = Readme,
     long_description_content_type="text/markdown",
