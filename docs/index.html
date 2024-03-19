@@ -148,8 +148,8 @@
       --bs-tooltip-border-radius: 0.5rem;
       --bs-tooltip-arrow-width: 1rem;
       --bs-tooltip-arrow-height: 0.5rem;
-      --bs-tooltip-arrow-outer-color: #000000;
-      --bs-tooltip-arrow-inner-color: #000000;
+      --bs-tooltip-arrow-outer-color: #EEEEEE;
+      --bs-tooltip-arrow-inner-color: #EEEEEE;
       --bs-tooltip-arrow-outer-filter: none;
       --bs-tooltip-arrow-inner-filter: none;
       --bs-popover-font-size: 1rem;
@@ -346,7 +346,7 @@
                   class="fa-solid fa-dna fa-2x"></i>   Gene Name to Search:</span>
               <div class="form-floating">
                 <input id="xxx" type="text" class="form-control form-control-lg"
-                  placeholder="Begin typing a name, e.g., dehydrogenase...">
+                  placeholder="Begin typing a name, e.g., dehydrogenase..." spellcheck="false">
                 <label for="selectGenes">Begin typing a name, e.g., dehydrogenase...</label>
               </div>
             </div>
@@ -370,7 +370,8 @@
           <span class="input-group-text bg-dark groupTextSize" id="spName" style="color: #EEEEEE;"><i
               class="fa-solid fa-bacterium fa-2x"></i>&nbsp;&nbsp;&nbsp;Species or Genus Name:</span>
           <div class="form-floating">
-            <input id="txtspName" type="text" class="form-control form-control-lg" placeholder="e.g., Salmonella">
+            <input spellcheck="false" id="txtspName" type="text" class="form-control form-control-lg"
+              placeholder="e.g., Salmonella">
             <label for="txtspName">Species or Genus to Search, e.g., <i>Salmonella</i></label>
           </div>
         </div>
@@ -379,14 +380,15 @@
           <span class="input-group-text bg-dark groupTextSize" id="geneName" style="color: #EEEEEE;"><i
               class="fa-solid fa-dna fa-2x"></i>&nbsp;&nbsp;&nbsp;Gene Name to Search:</span>
           <div class="form-floating">
-            <input id="selectGenes" type="text" class="form-control form-control-lg"
+            <input spellcheck="false" id="selectGenes" type="text" class="form-control form-control-lg"
               placeholder="Begin typing a gene name, e.g., wsx..." disabled>
             <label for="selectGenes">Begin typing a gene name, e.g., <i>yojI</i></label>
           </div>
           <span data-bs-toggle="modal" data-bs-target="#modalSearchGene" class="input-group-text bg-dark"
-            id="geneNameSearch" style="color: #EEEEEE; cursor: pointer;" data-bs-toggle="tooltip"
-            data-bs-title="If you don’t know the gene name, click here." data-bs-custom-class="info-tooltip"><i
-              class="fa-solid fa-circle-info fa-2x"></i></span>
+            id="geneNameSearch" style="color: #EEEEEE; cursor: pointer;"><i class="fa-solid fa-circle-info fa-2x"
+              data-bs-toggle="tooltip" data-bs-title="If you don’t know the gene name, click here."
+              data-bs-custom-class="info-tooltip"></i></span>
+          <small>Begin typing the code of the gene (e.g., <i>yojL</i>), or click on the icon <i class="fa-solid fa-circle-info"></i> on the right to discover the gene code by entering the name of the gene.</small>
         </div>
 
         <div class="col-6 input-group input-group-lg mt-5">
@@ -394,7 +396,7 @@
               class="fa-solid fa-magnifying-glass fa-2x"></i>&nbsp;&nbsp;&nbsp;Search in database:</span>
           <div class="form-floating">
             <select class="form-select" id="selectDatabase" disabled>
-              <option value="n" selected>Choose...</option>
+              <option value="n" selected>Click to Choose...</option>
               <option value="GenBank">GenBank</option>
               <option value="PubMedCentral">PubMedCentral</option>
             </select>
@@ -407,19 +409,14 @@
               class="fa-solid fa-list fa-2x"></i>&nbsp;&nbsp;&nbsp;Search terms in:</span>
           <div class="form-floating">
             <select class="form-select" id="selectTerms" disabled>
-              <option value="n" selected>Choose...</option>
-              <optgroup label="GenBank">
-                <option value="All Fields">All Fields</option>
-                <option value="Title">Title</option>
-                <option value="Organism">Organism</option>
-              </optgroup>
-              <optgroup label="PubMedCentral">
-                <option value="Title">Title</option>
-                <option value="Abstract">Abstract</option>
-                <option value="FullText">Full Text</option>
-                <option value="MeSH Terms">MeSH Terms</option>
-              </optgroup>
+              <option value="n" selected>Click to Choose...</option>
+              <option value="All Fields">All Fields <i>(GenBank/PubMed)</i> Suggested</option>
+              <option value="Title">Title <i>(GenBank/PubMed)</i></option>
+              <option value="Abstract">Abstract <i>(PubMed)</i></option>
+              <option value="FullText">Full Text <i>(PubMed)</i></option>
+              <option value="MeSH Terms">MeSH Terms <i>(PubMed)</i></option>
             </select>
+            
             <label for="selectTerms">Choose terms to search</label>
           </div>
         </div>
@@ -511,12 +508,12 @@
 
             <div class="col-md-4 text-center">
               <div class="media">
-                <img src="assets/Iracilda.png" class="mr-3 mx-auto d-block" alt="Iracilda Sampaio" width="25%">
+                <img src="assets/Davidson.png" class="mr-3 mx-auto d-block" alt="Davidson Sodré" width="25%">
                 <div class="media-body">
-                  <h5 class="mt-0">Iracilda Sampaio</h5>
-                  <p><i class="bi bi-envelope"></i> <a href="mailto:ira@ufpa.br">ira@ufpa.br</a></p>
-                  <p><i class="bi bi-twitter-x"></i> <a href="https://x.com/IracildaSampaio"
-                      target="_blank">@IracildaSampaio</a></p>
+                  <h5 class="mt-0">Davidson Sodré</h5>
+                  <p><i class="bi bi-envelope"></i> <a href="mailto:davidson.sodre@ufra.edu.br">davidson.sodre@ufra.edu.br</a></p>
+                  <p><i class="bi bi-twitter-x"></i> <a href="https://x.com/_DSodre_"
+                      target="_blank">@_DSodre_</a></p>
                 </div>
               </div>
             </div>
@@ -602,15 +599,32 @@
         }
       });
 
-      spName.addEventListener("blur", function () {
+      $("#selectGenes").on("focus", function () {
+        let tooltip = $('[data-bs-toggle="tooltip"]');
         setTimeout(() => {
-          let tooltip = $('[data-bs-toggle="tooltip"]');
           tooltip.tooltip('show');
+        }, 1000);
+        setTimeout(() => {
+          tooltip.tooltip('hide');
+        }, 5000);
+      }).autocomplete({
+        source: function (request, response) {
+          var keys = Object.keys(BacteriasGenes);
+          var results = $.ui.autocomplete.filter(keys, request.term);
+          response(results.slice(0, 10));
+        },
+        select: function (event, ui) {
+          let tooltip = $('[data-bs-toggle="tooltip"]');
+          setTimeout(() => {
+            tooltip.tooltip('show');
+          }, 1000);
           setTimeout(() => {
             tooltip.tooltip('hide');
-          }, 2000);
-        }, 2000);
+          }, 5000);
+        }
       });
+
+
 
 
 
@@ -648,8 +662,6 @@
         }
       }
 
-      // Agora, usamos esse objeto invertido para a busca
-      // Agora, usamos esse objeto invertido para a busca
       $("#xxx").autocomplete({
         source: function (request, response) {
           var keys = Object.keys(invertedBacteriasGenes);
@@ -658,10 +670,14 @@
         },
         select: function (event, ui) {
           $("#modalSearchGene").modal('hide');
-          $("#selectGenes").val(invertedBacteriasGenes[ui.item.value]).trigger('input'); // Dispara o evento de input
-          $("#selectGenes").autocomplete("disable");
+          var selectGenes = $("#selectGenes");
+          selectGenes.val(invertedBacteriasGenes[ui.item.value]);
+          selectGenes.trigger('input'); // Dispara o evento de input
+          selectGenes.autocomplete("disable");
         }
-      }).on('input', function () {
+      });
+
+      $("#selectGenes").on('input', function () {
         if (this.value.length < 3) {
           this.style.backgroundColor = initialColor;
           selectDatabase.disabled = true;
@@ -671,8 +687,9 @@
           selectDatabase.disabled = !(this.value in invertedBacteriasGenes);
           resetFields();
         }
-        $("#selectGenes").autocomplete("enable"); // Reativa o autocomplete quando o usuário começa a digitar
+        $(this).autocomplete("enable"); // Reativa o autocomplete quando o usuário começa a digitar
       });
+
 
 
 
