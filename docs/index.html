@@ -41,7 +41,6 @@
   <meta property="twitter:image"
     content="https://raw.githubusercontent.com/luanrabelo/SyBA/stable/docs/assets/SyBAsm.png" />
 
-
   <style>
     body {
       font-family: "Anta", sans-serif;
@@ -93,12 +92,10 @@
 
     .groupTextSize {
       width: 350px;
-
-      @media (max-width: 480px) {
+      @media (max-width: 412px) {
         width: 16vi;
-        font-size: 0.45em;
+        
       }
-
     }
 
     sup {
@@ -174,38 +171,36 @@
         </button>
 
         <div class="collapse navbar-collapse" id="menuSyBA">
-          <ul class="navbar-nav me-auto">
+          <ul class="navbar-nav mb-2">
             <li>
-              <a class="btn btn-lg btn-dark text-white" href="https://github.com/luanrabelo/SyBA" role="button"
+              <a class="btn btn-lg btn-dark text-white w-100" href="https://github.com/luanrabelo/SyBA" role="button"
                 target="_blank">GitHub</a>
             </li>
             <li>
-              <button class="btn btn-lg btn-dark text-white" data-bs-toggle="modal" data-bs-target="#citeUs">Cite
+              <button class="btn btn-lg btn-dark text-white w-100" data-bs-toggle="modal" data-bs-target="#citeUs">Cite
                 Us</button>
             </li>
             <li>
-              <button class="btn btn-lg btn-dark text-white" data-bs-toggle="modal"
+              <button class="btn btn-lg btn-dark text-white w-100" data-bs-toggle="modal"
                 data-bs-target="#donationModal">Donate</button>
             </li>
             <li>
-              <button class="btn btn-lg btn-dark text-white" data-bs-toggle="modal"
+              <button class="btn btn-lg btn-dark text-white w-100" data-bs-toggle="modal"
                 data-bs-target="#aboutSyBA">About</button>
             </li>
           </ul>
+          <!--
           <div class="ms-auto">
             <a class="btn btn-lg btn-dark text-white" href="https://luanrabelo.github.io/SynGenes/" role="button" target="_blank">
                 <img src="assets/SynGenes.png" alt="Image description" width="35" height="35">
                 Search for mitochondrial or chloroplast genes?
             </a>
-        </div>
-        
-        
+          </div>
+          -->
         </div>
       </div>
     </nav>
   </header>
-
-
 
   <main class="mb-5">
 
@@ -350,11 +345,11 @@
           <div class="modal-body text-center">
             <div class="col-6 input-group input-group-lg mt-5">
               <span class="input-group-text bg-dark groupTextSize" id="geneName" style="color: #EEEEEE;"><i
-                  class="fa-solid fa-dna fa-2x"></i>   Gene Name to Search:</span>
+                  class="fa-solid fa-dna fa-2x"></i>Gene Name to Search:</span>
               <div class="form-floating">
-                <input id="xxx" type="text" class="form-control form-control-lg"
-                  placeholder="Begin typing a name, e.g., dehydrogenase..." spellcheck="false">
-                <label for="selectGenes">Begin typing a name, e.g., dehydrogenase...</label>
+                <input id="geneFullName" type="text" class="form-control form-control-lg"
+                  placeholder="Typing a name, e.g., dehydrogenase..." spellcheck="false">
+                <label for="selectGenes">Typing the gene name, e.g., dehydrogenase...</label>
               </div>
             </div>
           </div>
@@ -370,32 +365,35 @@
       <div class="row">
 
         <div class="display-2 text-center mb-2 mt-2"><b>SyBA</b><sup class="text-muted">v1.0.0</sup></div>
-        <div class="display-6 text-center mb-2 mt-2">Search your <b>bacterial</b> genomic data in <b>GenBank</b> and <b>PubMedCentral</b></div>
-        <hr class="mt-5 mb-5">
+        <div class="display-6 text-center mb-2 mt-2">Search your <b>bacterial</b> genomic data in <b>GenBank</b> and
+          <b>PubMedCentral</b></div>
+        <hr class="mt-2 mb-2">
 
-        <div class="col-6 input-group input-group-lg mt-5">
+        <div class="col-6 input-group input-group-lg mt-2">
           <span class="input-group-text bg-dark groupTextSize" id="spName" style="color: #EEEEEE;"><i
               class="fa-solid fa-bacterium fa-2x"></i>&nbsp;&nbsp;&nbsp;Species or Genus Name:</span>
           <div class="form-floating">
             <input spellcheck="false" id="txtspName" type="text" class="form-control form-control-lg"
               placeholder="e.g., Salmonella">
-            <label for="txtspName">Species or Genus to Search, e.g., <i>Salmonella</i></label>
+            <label for="txtspName">Search Species or Genus, e.g., <i>Salmonella</i></label>
           </div>
         </div>
 
         <div class="col-6 input-group input-group-lg mt-5">
           <span class="input-group-text bg-dark groupTextSize" id="geneName" style="color: #EEEEEE;"><i
-              class="fa-solid fa-dna fa-2x"></i>&nbsp;&nbsp;&nbsp;Gene Name to Search:</span>
+              class="fa-solid fa-dna fa-2x"></i>&nbsp;&nbsp;&nbsp;Gene Symbol to Search:</span>
           <div class="form-floating">
             <input spellcheck="false" id="selectGenes" type="text" class="form-control form-control-lg"
-              placeholder="Begin typing a gene name, e.g., wsx..." disabled>
-            <label for="selectGenes">Begin typing a gene name, e.g., <i>yojI</i></label>
+              placeholder="Typing a gene symbol, e.g., wsx..." disabled>
+            <label for="selectGenes">Typing a gene symbol, e.g., <i>yojI</i></label>
           </div>
           <span data-bs-toggle="modal" data-bs-target="#modalSearchGene" class="input-group-text bg-dark"
             id="geneNameSearch" style="color: #EEEEEE; cursor: pointer;"><i class="fa-solid fa-circle-info fa-2x"
-              data-bs-toggle="tooltip" data-bs-title="If you don’t know the gene name, click here."
+              data-bs-toggle="tooltip" data-bs-title="If you don’t know the gene symbol, click here."
               data-bs-custom-class="info-tooltip"></i></span>
-          <small>Begin typing the code of the gene (e.g., <i>yojL</i>), or click on the icon <i class="fa-solid fa-circle-info"></i> on the right to discover the gene code by entering the name of the gene.</small>
+          <small>Begin typing the code of the gene (e.g., <i>yojL</i>), or click on the icon <i
+              class="fa-solid fa-circle-info"></i> on the right to discover the gene code by entering the name of the
+            gene.</small>
         </div>
 
         <div class="col-6 input-group input-group-lg mt-5">
@@ -423,7 +421,7 @@
               <option value="FullText">Full Text <i>(PubMed)</i></option>
               <option value="MeSH Terms">MeSH Terms <i>(PubMed)</i></option>
             </select>
-            
+
             <label for="selectTerms">Choose terms to search</label>
           </div>
         </div>
@@ -436,7 +434,7 @@
 
         <div class="col-12 mt-5">
           <div class="input-group input-group-lg">
-            <span id="clipboardCopy" style="cursor: pointer; color: #EEEEEE;" class="input-group-text bg-dark"><i
+            <span id="clipboardCopy" style="cursor: pointer; color: #EEEEEE;" class="input-group-text groupTextSize bg-dark"><i
                 class="fa-solid fa-2x fa-copy"></i>&nbsp;&nbsp;&nbsp;Copy to clipboard</span>
             <div class="form-floating">
               <textarea style="height: 15vh" id="txtQuery" class="form-control" aria-label="With textarea"
@@ -452,21 +450,14 @@
           </div>
         </div>
 
-
-
-
         <div class="col-12 mt-0">
           <div class="d-grid col-lg-6 col-md-12 mx-auto mt-5">
             <button id="resetFields" class="btn btn-danger btn-lg" type="button">New Search</button>
           </div>
         </div>
 
-
-
       </div>
     </div>
-
-
 
   </main>
 
@@ -518,9 +509,9 @@
                 <img src="assets/Davidson.png" class="mr-3 mx-auto d-block" alt="Davidson Sodré" width="25%">
                 <div class="media-body">
                   <h5 class="mt-0">Davidson Sodré</h5>
-                  <p><i class="bi bi-envelope"></i> <a href="mailto:davidson.sodre@ufra.edu.br">davidson.sodre@ufra.edu.br</a></p>
-                  <p><i class="bi bi-twitter-x"></i> <a href="https://x.com/_DSodre_"
-                      target="_blank">@_DSodre_</a></p>
+                  <p><i class="bi bi-envelope"></i> <a
+                      href="mailto:davidson.sodre@ufra.edu.br">davidson.sodre@ufra.edu.br</a></p>
+                  <p><i class="bi bi-twitter-x"></i> <a href="https://x.com/_DSodre_" target="_blank">@_DSodre_</a></p>
                 </div>
               </div>
             </div>
@@ -560,6 +551,7 @@
 
           </div>
         </div>
+        <small class="text-center bg-white text-black">SyBA Page was created by Luan Rabelo.</small>
       </div>
     </div>
   </footer>
@@ -669,7 +661,7 @@
         }
       }
 
-      $("#xxx").autocomplete({
+      $("#geneFullName").autocomplete({
         source: function (request, response) {
           var keys = Object.keys(invertedBacteriasGenes);
           var results = $.ui.autocomplete.filter(keys, request.term);
@@ -696,10 +688,6 @@
         }
         $(this).autocomplete("enable"); // Reativa o autocomplete quando o usuário começa a digitar
       });
-
-
-
-
 
       selectDatabase.addEventListener("change", function () {
         var selectedValue = this.value;
