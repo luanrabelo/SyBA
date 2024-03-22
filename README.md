@@ -251,8 +251,11 @@ Navigate to the `Examples` folder to view a **notebook file** that showcases exa
 ##### [Go to Contents Overview](#contents-overview)
 
 We’ve created an intuitive web form, accessible at [SyBA web form](https://luanrabelo.github.io/SyBA/), designed for researchers interested in conducting individual searches using different names linked to the same gene. This web form produces a command that includes multiple names, facilitating accurate searches on platforms like the National Center for Biotechnology Information (NCBI) - GenBank and PubMed Central.  
+&nbsp;  
 
-ADD GIF
+![SyBA Web Form](https://raw.githubusercontent.com/luanrabelo/SyBA/stable/assets/img/SyBA.gif "SyBA")
+&nbsp;  
+
 ***  
 &nbsp;  
 
