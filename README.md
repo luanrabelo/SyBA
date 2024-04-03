@@ -2,6 +2,12 @@
   <img src="https://raw.githubusercontent.com/luanrabelo/SyBA/stable/docs/assets/SyBA.png" alt="SyBA Logo" width="25%">
 </p>
 
+<p align="center">
+<a href="https://www.buymeacoffee.com/lprabelo">
+<img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=lprabelo&button_colour=EEEEEE&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=000000" />
+</a>
+</p>
+
 # Contents Overview
 - [System Overview](#system-overview)
 - [Getting Started with SyBA](#getting-started-with-syba)
