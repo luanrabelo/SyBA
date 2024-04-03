@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-<a href="https://www.buymeacoffee.com/lprabelo">
+<a href="https://www.buymeacoffee.com/lprabelo" target="_blank">
 <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=lprabelo&button_colour=EEEEEE&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=000000" />
 </a>
 </p>
