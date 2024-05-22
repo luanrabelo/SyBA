@@ -54,7 +54,7 @@ Before you run **SyBA**, make sure you have the following prerequisites installe
     - `openpyxl`  
     - `numpy`
 - ## Installation Guide
-There are **tree** ways to install **SyBA**:
+There are **two** ways to install **SyBA**:
 1. **Through pip**:  Install **SyBA** directly using pip:  
 ```bash  
 pip install SyBA
@@ -70,13 +70,15 @@ pip install -r requirements.txt
 ```
 - This command will **clone the repository**, and then you should **navigate to the cloned directory** to **install SyBA and its dependencies** using pip.
 &nbsp;  
-&nbsp;   
+&nbsp;
+<!---
 3. Installation via **conda**:  You can also install **SyBA** using conda with the following commands:  
 ```bash
 conda create -n SyBA -c conda-forge -c bioconda SyBA
 conda activate SyBA 
 ```
 - This method will set up **SyBA** along with its **dependencies** in a **new conda environment**.
+-->
 &nbsp;  
 ***  
 &nbsp;  
